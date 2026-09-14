@@ -42,7 +42,7 @@ function highlight(line: string) {
             ? "text-brand"
             : part.startsWith("<")
               ? "text-brand-soft"
-              : "text-brand-amber"
+              : "text-brand-accent"
       }
     >
       {part}
@@ -54,7 +54,7 @@ export function CodeWindow() {
   const lines = CODE.split("\n");
   return (
     <div aria-hidden="true" className="absolute inset-0 flex items-center pl-6">
-      <div className="absolute right-0 top-1/4 w-80 h-80 rounded-full bg-brand-amber/20 blur-[100px]" />
+      <div className="absolute right-0 top-1/4 w-80 h-80 rounded-full bg-brand-accent/20 blur-[100px]" />
       <div className="relative w-[115%] rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-sm shadow-2xl">
         <div className="flex items-center gap-2 px-4 h-10 border-b border-white/10">
           <WindowDots />
@@ -147,11 +147,11 @@ function Phone({ className = "", children }: { className?: string; children: Rea
 export function PhoneMockups() {
   return (
     <div aria-hidden="true" className="absolute inset-0 flex justify-center gap-4 pt-8">
-      <div className="absolute left-1/2 top-1/2 w-72 h-40 -translate-x-1/2 rounded-full bg-brand-amber/15 blur-[70px]" />
+      <div className="absolute left-1/2 top-1/2 w-72 h-40 -translate-x-1/2 rounded-full bg-brand-accent/15 blur-[70px]" />
       <Phone className="mt-10">
         <p className="text-[9px] text-white/40">Good morning</p>
         <p className="text-xs text-white/90 font-medium mb-2">Wallet</p>
-        <div className="rounded-xl p-2.5 bg-gradient-to-br from-brand to-brand-amber text-black">
+        <div className="rounded-xl p-2.5 bg-gradient-to-br from-brand to-brand-accent text-black">
           <p className="text-[8px] opacity-70">Balance</p>
           <p className="text-sm font-semibold">$12,480.00</p>
         </div>
@@ -272,12 +272,12 @@ export function DesignCanvas() {
         </div>
         {/* Collaborator cursor */}
         <div className="absolute -right-8 bottom-4 flex items-start">
-          <MousePointer2 className="w-4 h-4 text-brand-amber fill-brand-amber" />
-          <span className="mt-3 -ml-1 px-1.5 py-0.5 rounded bg-brand-amber text-black text-[9px] font-medium">Designer</span>
+          <MousePointer2 className="w-4 h-4 text-brand-accent fill-brand-accent" />
+          <span className="mt-3 -ml-1 px-1.5 py-0.5 rounded bg-brand-accent text-black text-[9px] font-medium">Designer</span>
         </div>
       </div>
       <div className="hidden sm:flex absolute right-6 top-1/2 -translate-y-1/2 flex-col gap-2 p-2 rounded-lg border border-white/10 bg-black">
-        {["var(--color-brand)", "var(--color-brand-amber)", "var(--color-brand-soft)", "#f5f5f4"].map((color) => (
+        {["var(--color-brand)", "var(--color-brand-accent)", "var(--color-brand-soft)", "#f5f5f4"].map((color) => (
           <span key={color} className="w-5 h-5 rounded-full" style={{ backgroundColor: color }} />
         ))}
       </div>

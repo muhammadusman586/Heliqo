@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { LogoMark } from "@/components/landing/logo";
+import { Wordmark } from "@/components/landing/logo";
 
 const footerLinks = {
   Services: [
@@ -53,7 +53,8 @@ export function FooterSection() {
             className="font-display text-[26vw] md:text-[20vw] leading-none tracking-tighter text-transparent select-none"
             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.35)" }}
           >
-            Heliqo
+            heliqo
+            <span className="inline-block w-[0.2em] h-[0.2em] ml-[0.04em] rounded-full bg-gradient-to-br from-brand-accent via-brand to-brand-deep" />
           </span>
         </div>
       </div>
@@ -65,9 +66,8 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-3 mb-6">
-                <LogoMark className="w-8 h-8" />
-                <span className="text-2xl font-display text-white">Heliqo</span>
+              <a href="#" className="inline-flex mb-6">
+                <Wordmark className="text-2xl text-white" />
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">

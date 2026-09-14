@@ -5,10 +5,10 @@
 
 /* Brand accent — change these four values to re-theme every highlight on the site */
 @theme static {
-  --color-brand: #fb923c;
-  --color-brand-soft: #fed7aa;
-  --color-brand-amber: #fbbf24;
-  --color-brand-deep: #ea580c;
+  --color-brand: #34d399;
+  --color-brand-soft: #a7f3d0;
+  --color-brand-accent: #a3e635;
+  --color-brand-deep: #059669;
 }
 
 :root {

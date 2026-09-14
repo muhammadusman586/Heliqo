@@ -32,8 +32,8 @@ export function AsciiScene() {
 
     // Accent colors come from the brand tokens in globals.css
     const css = getComputedStyle(document.documentElement);
-    const brand = css.getPropertyValue("--color-brand").trim() || "#fb923c";
-    const amber = css.getPropertyValue("--color-brand-amber").trim() || "#fbbf24";
+    const brand = css.getPropertyValue("--color-brand").trim() || "#34d399";
+    const accent = css.getPropertyValue("--color-brand-accent").trim() || "#a3e635";
 
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -187,7 +187,7 @@ export function AsciiScene() {
         const pz = Math.sin(time + i) * 0.5 + 0.5;
 
         ctx.globalAlpha = pz * 0.3;
-        ctx.fillStyle = amber;
+        ctx.fillStyle = accent;
         ctx.fillText(
           ASCII_CHARS[Math.floor(pz * (ASCII_CHARS.length - 1))],
           px,

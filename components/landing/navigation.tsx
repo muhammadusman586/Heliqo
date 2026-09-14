@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { LogoMark } from "@/components/landing/logo";
+import { Wordmark } from "@/components/landing/logo";
 
 const navLinks = [
   { name: "Services",      href: "#services"      },
@@ -45,9 +45,8 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <LogoMark className={`transition-all duration-500 ${isScrolled ? "w-7 h-7" : "w-8 h-8"}`} />
-            <span className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl text-foreground" : "text-2xl text-white"}`}>Heliqo</span>
+          <a href="#" className="flex items-center group">
+            <Wordmark className={`transition-all duration-500 ${isScrolled ? "text-xl text-foreground" : "text-2xl text-white"}`} />
           </a>
 
           {/* Desktop Navigation */}

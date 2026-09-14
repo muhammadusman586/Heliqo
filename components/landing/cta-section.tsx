@@ -17,7 +17,7 @@ declare global {
 // Calendly only applies custom colors on paid plans; free plans show its default light theme.
 const CALENDLY_EMBED_URL =
   CALENDLY_URL &&
-  `${CALENDLY_URL}${CALENDLY_URL.includes("?") ? "&" : "?"}hide_gdpr_banner=1&background_color=0a0a0c&text_color=f5f5f4&primary_color=fb923c`;
+  `${CALENDLY_URL}${CALENDLY_URL.includes("?") ? "&" : "?"}hide_gdpr_banner=1&background_color=0a0a0c&text_color=f5f5f4&primary_color=34d399`;
 
 const TABS = [
   { id: "message", label: "Send a message", icon: Mail },
