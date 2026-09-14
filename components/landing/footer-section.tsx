@@ -16,7 +16,8 @@ const footerLinks = {
   ],
   Contact: [
     { name: "hello@heliqo.com", href: "mailto:hello@heliqo.com" },
-    { name: "Start a project", href: "#contact" },
+    { name: "Contact us", href: "#contact" },
+    { name: "Schedule a meeting", href: "#schedule" },
   ],
   Legal: [
     { name: "Privacy", href: "#" },

@@ -66,12 +66,18 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
+            <a
+              href="#schedule"
+              className={`hidden lg:inline transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}
+            >
+              Schedule a meeting
+            </a>
             <Button
               asChild
               size="sm"
               className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
             >
-              <a href="#contact">Start a project</a>
+              <a href="#contact">Contact us</a>
             </Button>
           </div>
 
@@ -132,7 +138,14 @@ export function Navigation() {
               asChild
               className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
             >
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Start a project</a>
+              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact us</a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="flex-1 rounded-full h-14 text-base"
+            >
+              <a href="#schedule" onClick={() => setIsMobileMenuOpen(false)}>Book a call</a>
             </Button>
           </div>
         </div>

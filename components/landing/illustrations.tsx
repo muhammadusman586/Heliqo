@@ -1,8 +1,6 @@
 import type { ReactNode } from "react";
-import { ArrowUp, Check, FileText, Mail, MessageSquare, MousePointer2, Sparkles } from "lucide-react";
-import { LogoMark } from "@/components/landing/logo";
+import { Check, FileText, Mail, MessageSquare, MousePointer2, Sparkles } from "lucide-react";
 
-// Code-drawn visuals for the landing page: no image files, crisp at any size, on-palette.
 
 function WindowDots() {
   return (
@@ -14,7 +12,6 @@ function WindowDots() {
   );
 }
 
-/* ---------- Services: code editor ---------- */
 
 const CODE = `// app/dashboard/page.tsx
 import { getMetrics } from "@/lib/analytics";
@@ -35,7 +32,6 @@ const TOKEN = /("[^"]*"|<\/?\w+|\b(?:import|from|export|default|async|function|c
 
 function highlight(line: string) {
   if (line.trimStart().startsWith("//")) return <span className="text-white/30">{line}</span>;
-  // split() with one capture group alternates: even index = plain text, odd = token
   return line.split(TOKEN).map((part, i) => (
     <span
       key={i}
@@ -81,7 +77,6 @@ export function CodeWindow() {
   );
 }
 
-/* ---------- Services: custom software (admin dashboard) ---------- */
 
 const ORDERS: [string, string, string][] = [
   ["#1024", "Acme Corp", "Paid"],
@@ -388,63 +383,5 @@ export function ArchitectureDiagram() {
         </g>
       ))}
     </svg>
-  );
-}
-
-/* ---------- Contact: client chat ---------- */
-
-function Bubble({ mine, children }: { mine?: boolean; children: ReactNode }) {
-  return (
-    <div
-      className={`max-w-[80%] w-fit px-4 py-3 rounded-2xl leading-relaxed ${
-        mine ? "ml-auto rounded-br-sm bg-foreground text-background" : "rounded-bl-sm bg-brand/10"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
-
-export function ChatMockup() {
-  return (
-    <div aria-hidden="true" className="relative w-full">
-      <div className="absolute -inset-10 rounded-full bg-brand/10 blur-[80px]" />
-      <div className="relative rounded-2xl border border-foreground/10 bg-background/80 backdrop-blur-sm overflow-hidden">
-        <div className="flex items-center gap-3 px-5 h-16 border-b border-foreground/10">
-          <LogoMark className="w-9 h-9" />
-          <div className="leading-tight">
-            <p className="text-sm font-medium">Heliqo</p>
-            <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              Replies within 24h
-            </p>
-          </div>
-        </div>
-
-        <div className="p-5 space-y-4 text-sm">
-          <Bubble mine>Hi! We&apos;re building a lending app and need an MVP — web and iOS. Can you help?</Bubble>
-          <Bubble>Absolutely, that&apos;s exactly what we do. Free for a 30-minute call on Thursday?</Bubble>
-          <Bubble mine>Thursday works. Sending over our brief now.</Bubble>
-          <div className="flex justify-end">
-            <span className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-foreground/10 font-mono text-xs text-muted-foreground">
-              <FileText className="w-4 h-4" />
-              product-brief.pdf · 2.4 MB
-            </span>
-          </div>
-          <div className="flex gap-1 w-fit px-4 py-3 rounded-2xl rounded-bl-sm bg-brand/10">
-            {[0, 1, 2].map((i) => (
-              <span key={i} className="w-1.5 h-1.5 rounded-full bg-brand animate-bounce" style={{ animationDelay: `${i * 150}ms` }} />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3 m-5 mt-1 pl-5 pr-2 h-12 rounded-full border border-foreground/10 text-sm text-muted-foreground">
-          Tell us about your project…
-          <span className="ml-auto w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center">
-            <ArrowUp className="w-4 h-4" />
-          </span>
-        </div>
-      </div>
-    </div>
   );
 }
